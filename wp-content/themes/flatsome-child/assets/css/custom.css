@@ -1,3 +1,8 @@
+a {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
 header .cart-item [data-icon-label]:after {
   -webkit-box-shadow: none;
           box-shadow: none;
@@ -960,6 +965,181 @@ header .form-flat input {
   text-transform: unset !important;
 }
 
+#tt-quickView {
+  position: fixed;
+  top: 50%;
+  right: 0px;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  z-index: 1000;
+}
+
+#tt-quickView .tt-quickview-wrap {
+  background: #0D1C3F;
+  padding: 15px 15px 15px 20px;
+  border-radius: 10px 0px 0px 10px;
+  width: 85px;
+  position: relative;
+}
+
+#tt-quickView .vmore-item {
+  margin-bottom: 10px;
+  border-radius: 3px;
+  background: #fff;
+  width: 50px;
+  height: 50px;
+}
+
+#tt-quickView .vmore-item a {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.devcatProduct-list {
+  margin-bottom: 50px;
+}
+
+.devcatProduct-list a {
+  height: 300px;
+  display: block;
+}
+
+.devcatProduct-list a img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  height: 100%;
+}
+
+.header-nav-main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap !important;
+      flex-wrap: nowrap !important;
+}
+
+.header-nav-main #mega-menu-wrap {
+  max-width: 200px;
+}
+
+.home-devBanner {
+  margin-top: 15px;
+}
+
+.home-devBanner .col {
+  padding: 0px 7px 30px;
+}
+
+.home-vertical-menu {
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  height: 100%;
+  padding: 15px 0px;
+  border-radius: 6px;
+}
+
+.home-vertical-menu #menu-ot {
+  cursor: pointer;
+}
+
+.home-vertical-menu #menu-ot a {
+  color: #000;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.home-vertical-menu #menu-ot .menu-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0px 7px;
+}
+
+.home-vertical-menu #menu-ot .menu-item:hover {
+  color: #ed1c24;
+}
+
+.home-vertical-menu #menu-ot .menu-item:hover a {
+  color: #ed1c24;
+}
+
+.home-vertical-menu #menu-ot button.toggle {
+  -webkit-transform: rotate(-90deg) !important;
+          transform: rotate(-90deg) !important;
+}
+
+.home-vertical-menu #menu-ot button.toggle i {
+  font-size: 20px;
+}
+
+.home-vertical-menu #menu-ot .menu-item.active {
+  position: relative;
+}
+
+.home-vertical-menu #menu-ot .menu-item.active .sub-menu {
+  position: absolute;
+  top: 0px;
+  left: calc(100%);
+  background-color: #fff;
+  z-index: 999;
+  border: none;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  padding: 15px 0px;
+}
+
+.home-vertical-menu #menu-ot .menu-item.active .sub-menu li {
+  padding: 0px 7px;
+}
+
+.right-banner .item {
+  height: 120px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+}
+
+.right-banner .item::before {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: 0px;
+  background: rgba(0, 0, 0, 0.4);
+  content: "";
+}
+
+.right-banner .item .banner-text {
+  position: absolute;
+  font-weight: 600;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.right-banner .item a {
+  color: #fff;
+  text-align: center;
+}
+
+.right-banner .item a:hover {
+  color: #ed1c24;
+}
+
 body {
   color: #000 !important;
 }
@@ -1053,7 +1233,7 @@ body.logged-in .account-item {
 }
 
 .home-devBanner .gallery-top .swiper-slide {
-  height: 400px;
+  height: 310px;
 }
 
 .home-devBanner .gallery-thumbs {
@@ -1077,7 +1257,7 @@ body.logged-in .account-item {
 }
 
 .home-devBanner .gallery-thumbs .banner-text {
-  padding: 30px;
+  padding: 15px;
 }
 
 .home-devBanner .gallery-thumbs .swiper-slide.swiper-slide-thumb-active:after {
@@ -1559,5 +1739,13 @@ a.dev-tabCustom:hover {
 
 .dev-short-description.expand:after, .tab-panels .woocommerce-Tabs-panel .content.expand:after {
   display: none;
+}
+
+.saleNews-list .card-title .title {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
 }
 /*# sourceMappingURL=custom.css.map */

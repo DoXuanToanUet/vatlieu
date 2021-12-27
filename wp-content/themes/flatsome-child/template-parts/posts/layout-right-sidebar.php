@@ -5,7 +5,7 @@
 <?php if(!is_single() && flatsome_option('blog_featured') == 'top'){ get_template_part('template-parts/posts/featured-posts'); } ?>
 
 <div class="row row-large <?php if(flatsome_option('blog_layout_divider')) echo 'row-divided ';?>">
-	<?php echo do_shortcode( "[devCustomHeaderPost]" );?>
+	<?php if(is_single()) : echo do_shortcode( "[devCustomHeaderPost]" ); endif;?>
 	<div class="large-9 col">
 	
 	<?php if(!is_single() && flatsome_option('blog_featured') == 'content'){ get_template_part('template-parts/posts/featured-posts'); } ?>

@@ -103,10 +103,8 @@
                         endif;  
                     ?>
                 </div>
-                <div class="swiper-button-next">
-                </div>
-                <div class="swiper-button-prev">
-                </div>  
+                <div class="swiper-button-next"><span class="lnr lnr-chevron-right"></span></div>
+                <div class="swiper-button-prev"><span class="lnr lnr-chevron-left"></span></div>
             </div>
         </div>
     </div>

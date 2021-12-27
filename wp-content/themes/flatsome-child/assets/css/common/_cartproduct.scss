@@ -1,0 +1,11 @@
+.devcatProduct-list{
+    margin-bottom: 50px;
+    a{
+        height: 300px;
+        display: block;
+        img{
+            object-fit: contain;
+            height: 100%;
+        }
+    }
+}

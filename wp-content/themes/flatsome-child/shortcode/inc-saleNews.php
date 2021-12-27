@@ -34,7 +34,9 @@
                                         <div class="card">
                                             <a href="<?php the_permalink( );?>">
                                                 <div class="cat-img">
-                                                    <?php if (has_post_thumbnail()): the_post_thumbnail();  endif;?>
+                                                    <?php if (has_post_thumbnail()): the_post_thumbnail(); else: ?>
+                                                        <img  src="<?php echo get_stylesheet_directory_uri().'/assets/images/defaultImg.jpg'; ?>" alt="">
+                                                    <?php endif;?>
                                                 </div>
                                                 <div class="card-title">
                                                     <p class="title"><?php the_title();?></p>

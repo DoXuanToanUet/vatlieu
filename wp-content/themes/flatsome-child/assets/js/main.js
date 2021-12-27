@@ -106,11 +106,40 @@
                         }
                     }
                 });
+            },
+            swiperGalleryCat:function ($class){
+                // console.log("swiper test");
+                new Swiper($class, {
+                    spaceBetween: 20,
+                    slidesPerView: 1,
+                    autoplay: {
+                        delay: 5000,
+                    },
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                    },
+                    // pagination: {
+                    //     el: '.swiper-pagination',
+                    //     clickable: true,
+                    // },
+                    breakpoints: {
+                        //max-width> 575px
+                        575: {
+                            slidesPerView: 1
+                        },
+                        768: {
+                            slidesPerView: 1
+                        }
+                    }
+                });
             }
+
         }
-        console.log( swiperApp)
+        // console.log( swiperApp)
         swiperApp.swiperGallery('.devProduct-swiper1');
         swiperApp.swiperGallery('.devProduct-swiper2');
+        swiperApp.swiperGalleryCat('.devProduct-swiperCat');
         // Section sản phẩm
         // var swiperProduct = 
         
@@ -190,6 +219,14 @@
                     break;
             }
         })
-       
+        
+
+        // Custom homepage slider
+        t= $(".home-vertical-menu #menu-ot li");
+        $(t).each(function (){
+            t1=$(this).find("button i.icon-angle-down")
+            console.log(t1)
+        })
+      
     })
 })(jQuery);

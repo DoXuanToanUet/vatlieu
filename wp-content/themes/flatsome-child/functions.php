@@ -26,8 +26,11 @@ require get_stylesheet_directory() . '/shortcode/inc-viewedProduct.php';
 require get_stylesheet_directory() . '/shortcode/inc-customProductSidebar.php';
 require get_stylesheet_directory() . '/shortcode/inc-comment.php';
 require get_stylesheet_directory() . '/shortcode/inc-comment-func.php';
+require get_stylesheet_directory() . '/shortcode/inc-fixbar.php';
+require get_stylesheet_directory() . '/shortcode/inc-catSlider.php';
 require get_stylesheet_directory() . '/custom/custom-avartar.php';
 require get_stylesheet_directory() . '/custom/custom-checkout.php';
+
 
 
 
@@ -154,6 +157,7 @@ function my_custom_translations( $strings ) {
     }
 add_filter( 'gettext', 'my_custom_translations', 20 );
 
+// Change text sub total
 add_filter('gettext', 'change_price_text_in_cart_page', 105, 3 );
 function change_price_text_in_cart_page( $translated, $text, $domain ) {
     if( is_cart() && $text == 'Subtotal' ) {
@@ -161,4 +165,5 @@ function change_price_text_in_cart_page( $translated, $text, $domain ) {
     }
     return $translated;
 }
+
 
