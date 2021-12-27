@@ -1,0 +1,21 @@
+
+header {
+    .cart-item [data-icon-label]:after{
+        // background-color: #fff;
+        // color: $main_color;
+        box-shadow: none;
+    }
+    .searchform{
+        // min-width: 500px;
+        border-radius: 5px;
+        input{
+            border: none;
+            background-color: #f6f6f6;
+            box-shadow: none;
+            height: 40px;
+        }
+    }
+    .form-flat input{
+        border-radius: 6px !important;
+    }
+}

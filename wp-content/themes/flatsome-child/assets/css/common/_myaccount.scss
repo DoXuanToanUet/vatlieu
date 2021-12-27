@@ -1,0 +1,136 @@
+@mixin  accountBkg {
+    background-image: linear-gradient(120deg,#00bfae 0,#0066ad 100%);
+}
+@mixin  styleButton {
+    text-transform: none;
+    color: #fff;
+    border-radius: 8px;
+}
+.woocommerce-MyAccount-navigation-link{
+    img{
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+    }
+}
+.woocommerce-account{
+    #main{
+        background-color: #f1f2f2;
+    }
+   .vertical-tabs{
+       .col-border{
+            background-color: #fff;
+            border-radius: 16px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.04);
+            .nav-vertical.nav-line>li>a:before{
+                @include accountBkg();
+            }
+       }
+   }
+   .woocommerce-MyAccount-orders,.woocommerce-EditAccountForm,.woocommerce-Addresses,.woocommerce-address-fields,.woocommerce-order-details,.woocommerce-customer-details{
+        background-color: #fff;
+        border-radius: 16px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.04);
+        padding: 15px;
+        margin-bottom: 15px;
+        a.woocommerce-button.view,button[type="submit"]{
+            @include accountBkg();
+            border-radius: 6px;
+            text-transform: none;
+            border: none;
+        }
+    }
+   .account-user{
+       padding: 15px 0px;
+      img{
+        width: 40px;
+        height: 40px;
+      }
+      .user-name{
+          font-weight: 600;
+          text-transform: uppercase;
+      }
+   }
+   #my-account-nav{
+       img{
+           width: 30px;
+           height: 30px;
+           margin-right: 10px;
+       }
+       a{
+           text-transform: none;
+           color: #000;
+       }
+   }
+   .dashboard-links{
+       li{
+           width: calc(25%);
+          
+       }
+       .account-img{
+            width: 50px;
+            height: 50px;
+            margin-bottom: 10px;
+       }
+       a{
+           display: flex;
+           flex-direction: column;
+           align-items: center;
+           justify-content: center;
+           color: #000;
+           background-color: #fff;
+           border-radius: 16px;
+           min-height: 160px;
+           border: none;
+           margin-right: 30px;
+           font-size: 16px;
+           font-weight: 600;
+           transition: all 0.3s ease;
+           &:hover{
+               background-color: #fff;
+               color: #000;
+               transform: translateY(-4px);
+           }
+       }
+   }
+   .my-account-header.featured-title{
+       .page-title-inner{
+            min-height: 200px;
+       }
+      .fill{
+        background: rgba(0,0,0,0.15);
+      }
+   }
+    .woocommerce-Button{
+        @include accountBkg();
+        @include styleButton();
+        font-size: 13px;
+        padding: 6px 18px;
+        border: none;
+   }
+}
+.front-status{
+    padding: 4px 8px;
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: 500;
+}
+.front-status-on-hold{
+    background-color: #ffdba7;
+    color: #FFA41D;
+}
+.front-status-success{
+    background-color: #e7fbe6;
+    color: #68e365;
+}
+.front-status-processing{
+    background: #c6e1c6;
+    color: #5b841b;
+}
+.front-status-cancel{
+    background-color: #fee6ea;
+    color: #f72b50;
+}
+.flex-status{
+    @include flexCenter();
+}

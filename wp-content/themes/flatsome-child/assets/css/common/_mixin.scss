@@ -1,0 +1,21 @@
+@mixin  cartBkg {
+    background-image: linear-gradient(to right, #FF512F 0%, #DD2476 51%, #ed1c24 100%) !important;
+    text-transform: none;
+    border-radius: 6px;
+
+}
+
+@mixin  devHover {
+    color: #555;
+    &:hover{
+        color: $main_color;
+    }
+    
+}
+@mixin  flexCenter {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+$main_color:#ed1c24;

@@ -1,0 +1,13 @@
+
+.woocommerce-mini-cart__buttons.buttons,.wc-proceed-to-checkout,.return-to-shop{
+    a{
+        @include cartBkg();
+    }
+}
+.place-order button[type="submit"],.actions button[type="submit"]{
+    @include cartBkg();
+}
+.nav-dropdown-has-border .nav-dropdown{
+    border-radius: 6px;
+    border: none !important;
+}

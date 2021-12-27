@@ -1,0 +1,70 @@
+.woocommerce-order-received{
+    header,footer{
+        display: none;
+    }
+    .thankyou-container{
+        max-width: 800px;
+        background:#fff;
+        padding: 30px !important;
+        border-radius: 4px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+    .thankyou-img{
+        @include flexCenter();
+        img{
+            max-width: 200px;
+        }
+    }
+    .woocommerce-thankyou-order-received{
+        @include flexCenter();
+        div{
+            padding: 10px;
+        }
+        margin-bottom: 10px;
+    }
+    .woocommerce-thankyou-order-details{
+        padding: 10px 30px;
+        border-radius: 6px;
+        background:#F5F7FA;
+        .row{
+            padding: 10px;
+            .lnr{
+                padding-right: 5px;
+            }
+        }
+    }
+   
+    ul{
+        list-style: none;
+    }
+    .woocommerce-bacs-bank-details,.woocommerce-order-details,.woocommerce-columns--addresses{
+        border-radius: 6px;
+        background:#F5F7FA;
+        padding: 20px 15px 20px;
+        margin-bottom: 15px;
+    }
+    .thankyou-footer{
+        @include flexCenter();
+        .btn-thankyou{
+            background-color: #198754;
+            border-color: #198754;
+            margin-right: 15px;
+            color: #fff;
+            padding: 10px 15px;
+            transition: all 0.3s ease;
+            border-radius: 6px;
+            &:hover{
+                color:#fff;
+                opacity: 0.8;
+            }
+        }
+    }
+    
+}
+.wc-bacs-bank-details-heading,.woocommerce-order-details__title,.woocommerce-columns--addresses .woocommerce-column__title{
+    text-align: center;
+    font-size: 18px;
+}
+.shop_table thead th{
+    text-transform: unset !important;
+}
