@@ -1217,14 +1217,6 @@ header .top-divider {
   padding: 0px 7px;
 }
 
-.home-vertical-menu #menu-ot .menu-item:hover {
-  color: #ed1c24;
-}
-
-.home-vertical-menu #menu-ot .menu-item:hover a {
-  color: #ed1c24;
-}
-
 .home-vertical-menu #menu-ot button.toggle {
   -webkit-transform: rotate(-90deg) !important;
           transform: rotate(-90deg) !important;
@@ -1252,6 +1244,10 @@ header .top-divider {
 
 .home-vertical-menu #menu-ot .menu-item.active .sub-menu li {
   padding: 0px 7px;
+}
+
+.home-vertical-menu #menu-ot a:hover {
+  color: #ed1c24;
 }
 
 .right-banner .item {
@@ -1314,10 +1310,6 @@ body::-webkit-scrollbar {
 body::-webkit-scrollbar-thumb {
   background-color: #ed1c24;
   border-radius: 6px;
-}
-
-.icon-menu {
-  color: #fff;
 }
 
 .feature-home-section .feature-tab {
@@ -1385,7 +1377,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .footer-mb .content .item {
-  width: 20%;
+  width: 25%;
 }
 
 .footer-mb .content .item a {
@@ -2163,6 +2155,9 @@ a.dev-tabCustom:hover {
   }
   .woocommerce-account .dashboard-links li {
     width: 50%;
+  }
+  .icon-menu {
+    color: #fff;
   }
 }
 /*# sourceMappingURL=custom.css.map */

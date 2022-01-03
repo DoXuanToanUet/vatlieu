@@ -17,14 +17,14 @@
                 </a>
             </div>
             <div class="item">
-                <a href="">
+                <a href="tel:<?php the_field("phone",'option'); ?>">
                     <span class="lnr lnr-phone-handset"></span>
                     <p>Hotline</p>
                 </a>
             </div>
             <div class="item">
                 <?php if (!is_user_logged_in() ):?>
-                    <a href="">
+                    <a href="<?php echo home_url() ?>/login">
                         <span class="lnr lnr-user"></span>
                         <p>Đăng nhập</p>
                     </a>
@@ -42,12 +42,12 @@
                     </a>
                 <?php endif; ?>   
             </div>
-            <div class="item">
-                <a href="">
+            <!-- <div class="item">
+                <a href="" class="menu-mb">
                     <span class="lnr lnr-list"></span>
                     <p>Menu</p>
                 </a>
-            </div>
+            </div> -->
         </div>
     </div>
     <?php if (get_field('category_mb_status','option') == true): ?>

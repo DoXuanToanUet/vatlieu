@@ -250,5 +250,10 @@
         // // Wow js 
         new WOW().init();
 
+
+        // $('.menu-mb').click(function (e){
+        //     e.preventDefault();
+        //     $(this).closest('body').find('.header-main .nav  li a ').trigger('click');
+        // })
     })
 })(jQuery);

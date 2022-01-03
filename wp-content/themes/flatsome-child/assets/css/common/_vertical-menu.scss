@@ -46,13 +46,13 @@
             display: flex;
             justify-content: space-between;
             padding: 0px 7px;
-            &:hover{
-                // background-color: $main_color;
-                color: $main_color;
-                a{
-                    color: $main_color;
-                }
-            } 
+            // &:hover{
+            //     // background-color: $main_color;
+            //     color: $main_color;
+            //     a{
+            //         color: $main_color;
+            //     }
+            // } 
         }
         button.toggle{
             transform: rotate(-90deg) !important;
@@ -78,6 +78,9 @@
             }
         }
     }
+}
+.home-vertical-menu #menu-ot a:hover{
+  color: $main_color;
 }
 .right-banner{
     .item{
@@ -139,7 +142,4 @@ body{
         background-color: $main_color;
         border-radius: 6px;
       }
-}
-.icon-menu{
-    color: #fff;
 }
