@@ -1,4 +1,4 @@
-<?php function createProductHome($attr)
+<?php function createfeatureProduct($attr)
 {
     ?>
        <?php
@@ -9,7 +9,7 @@
                     'swiperid'=>''
                 ], $attr
             ));
-           
+            // ob_start();
             $args = array(
                 'post_type' => 'product',
                 'post_status' => 'publish',
@@ -21,11 +21,28 @@
                         'taxonomy' => 'product_cat',
                         'field' => 'term_id',
                         'terms' => $cat,
-                        'operator' => 'IN',
-                        )
+                        // 'operator' => 'IN',
+                       
+                    ),
+                    array(
+                        'taxonomy' => 'product_visibility',
+                        'field'    => 'name',
+                        'terms'    => 'featured',
+                        'operator' => 'IN', // or 'NOT IN' to exclude feature products
+                    ),
+                    // array(
+                    //     'taxonomy' => 'product_visibility',
+                    //     'field'    => 'name',
+                    //     'terms'    => 'outofstock',
+                    //     'operator' => 'NOT IN', // or 'NOT IN' to exclude feature products
+                    // )
                 ),
+               
             );
             $getCat = new WP_Query($args);
+            // echo "<pre>";
+            // var_dump($getCat);
+            // echo "</pre>";
         ?>
         <h2 class="saleNews-title dev-title">
             <?php echo $title;?>
@@ -52,43 +69,39 @@
                                         <div class="card">
                                             <?php 
                                                 global $product;
-                                                // if ( $product->get_stock_status() == 'outofstock' ){
-                                                //     echo '<span class="onsale outofstock">'. esc_html__('Empty', 'woocommerce') .'</span>';
-                                                // }else
+            
                                                 if( $product->is_type('simple') || $product->is_type('external') || $product->is_type('grouped') ){
                                                     $view_regular 	= get_post_meta( $product->get_id(), '_regular_price', true ); 
+                                                    // echo $view_regular;
                                                     $view_sale 	= get_post_meta( $product->get_id(), '_sale_price', true );
-                                                    if(  $view_sale!=0 && $view_regular!=0){
+                                                    // echo $view_sale;
+                                                    if($view_sale!=0 && $view_regular!=0){
                                                         $view_precent=round(100 -($view_sale/$view_regular)*100).'%';
                                                         echo "<span class='home_sale_custom'>".'-'.$view_precent."</span>";
                                                     }
-                                                } else
+                                                } 
                                                 if($product->is_type('variable')){
                                                     $percentages = array();
             
                                                     // Get all variation prices
                                                     $prices = $product->get_variation_prices();
-                                                    // print_r ($prices);
+                                                    // print_r($prices);
                                                     // Loop through variation prices
-                                                    if( isset($prices ) ){
-                                                        foreach( $prices['price'] as $key => $price ){
-                                                            // Only on sale variations
-                                                            if( $prices['regular_price'][$key] !== $price ){
-                                                                // Calculate and set in the array the percentage for each variation on sale
-                                                                $percentages[] = round(100 - ($prices['sale_price'][$key] / $prices['regular_price'][$key] * 100));
-                                                                
-                                                            }
-                                                        }        
-                                                        // print_r( $percentages);   
-                                                        if( ($percentages) ) {
-                                                            $percentage = max($percentages) . '%';
-                                                            // echo $percentage;
-                                                            echo "<span class='home_sale_custom'>".'-'.$percentage."</span>";
-                                                        }                                             
-                                                        // We keep the highest value
-                                                        
+                                                    foreach( $prices['price'] as $key => $price ){
+                                                        // Only on sale variations
+                                                        if( $prices['regular_price'][$key] !== $price ){
+                                                            // Calculate and set in the array the percentage for each variation on sale
+                                                            $percentages[] = round(100 - ($prices['sale_price'][$key] / $prices['regular_price'][$key] * 100));
+                                                        }
                                                     }
-                                                   
+                                                    if( ($percentages) ) {
+                                                        $percentage = max($percentages) . '%';
+                                                        // echo $percentage;
+                                                        echo "<span class='home_sale_custom'>".'-'.$percentage."</span>";
+                                                    }  
+                                                    // We keep the highest value
+                                                    // $percentage = max($percentages) . '%';
+                                                    // echo "<span class='home_sale_custom'>".'-'.$percentage."</span>";
                                                 }
                                                 
                                             ?>
@@ -136,8 +149,8 @@
                     <!-- <div class="swiper-pagination"></div> -->
                 </div>
         </div>
-
-    <?php 
+                                                            
+    <?php //ob_get_clean();
 }
 
-add_shortcode("devProductHome", "createProductHome");
+add_shortcode("devFeatureProduct", "createfeatureProduct");

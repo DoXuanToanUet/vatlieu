@@ -10,6 +10,8 @@
 @import "common/fixbar";
 @import "common/cartproduct";
 @import "common/vertical-menu";
+@import "common/feature-home";
+
 // @import "../fonts/fontface";
 
 body{
@@ -90,10 +92,7 @@ body.logged-in{
 }
 
 
-// Custom Flatsome menu vertical
-#mega-menu-wrap #mega_menu{
-    position: relative;
-}
+
 
 // Section Banner
 .home-devBanner{
@@ -290,8 +289,8 @@ a.dev-tabCustom{
     }
 }
 .onsale_custom,.home_sale_custom{
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     color: #fff !important;
     background-color:$main_color;
@@ -306,6 +305,7 @@ a.dev-tabCustom{
     position: absolute;
     top: 15px;
     left: 15px;
+    font-size: 15px;
 }
 .devProduct-list .card,.saleNews-list .card{
     box-shadow: 0 0 5px rgba(0,0,0,0.15);
@@ -506,3 +506,5 @@ a.dev-tabCustom{
     -webkit-box-orient: vertical;
     text-overflow: ellipsis;
 }
+
+@import "common/responsive";

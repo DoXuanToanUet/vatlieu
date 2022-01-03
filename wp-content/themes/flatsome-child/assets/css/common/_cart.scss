@@ -11,3 +11,33 @@
     border-radius: 6px;
     border: none !important;
 }
+.woocommerce-form-track-order{
+    max-width: 600px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    p.form-row-first{
+        margin-right: 0px;
+    }
+    p.form-row-first, p.form-row-last{
+        width: 100%;
+    }
+    button[type="submit"]{
+        @include accountBkg();
+        border-radius: 6px;
+        text-transform: none;
+        border: none;
+    }
+}
+.woocommerce-order-details{
+    max-width: 600px;
+    margin: auto;
+    .shop_table thead th, .shop_table .order-total td, .shop_table .order-total th{
+        border-width: 1px;
+    }
+}
+.order-info{
+    text-align: center;
+}

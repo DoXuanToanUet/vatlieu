@@ -20,4 +20,89 @@ header {
     .form-flat input{
         border-radius: 6px !important;
     }
+    .woocommerce-MyAccount-navigation-link{
+        a{
+            font-weight: 600;
+            color: #000 !important;
+        }
+    }
 }
+.header-phone,.header-login{
+    
+    // background-color: #000;
+    a{
+        font-weight: 600;
+        color: #fff;
+        font-size: 13px;
+        align-items: center;
+        margin-right: 10px;
+        padding: 5px;
+        border-radius: 10px;
+        height: 100%;
+        &:hover{
+            background: rgba(255, 255, 255, 0.2);
+            color: #fff;
+        }
+    }
+    p{
+        margin-bottom: 10px !important;
+        line-height: 1;
+    }
+    .lnr,svg{
+        font-size: 20px;
+        margin-right: 10px;
+    }
+}
+.header-login {
+    a{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: rgba(255, 255, 255, 0.2);
+        color: #fff;
+    }
+}
+// Custom Flatsome menu vertical
+// #mega-menu-wrap #mega_menu{
+//     position: relative;
+// }
+header{
+    
+    // box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    .top-divider{
+        display: none;
+    }
+}
+#woocommerce-product-search-field-0{
+    background: #fff;
+    font-weight: 600;
+    color: #000 !important;
+}
+#mega-menu-wrap{
+    background-color: #fff;
+    color: #000;
+    border-radius: 10px;
+    #mega-menu-title{
+        color: #000;
+    }
+}
+.account-item.has-icon.has-dropdown{
+    background: #fff;
+    border-radius: 4px;
+    .header-button a{
+        border: none;
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 5px 16px;
+        &:hover{
+            background-color: #fff !important;
+        }
+    }
+    span,.icon-user{
+        color: #000;
+    }    
+}
+.normal-title{
+    border: none !important;
+}
+

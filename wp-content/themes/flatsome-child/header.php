@@ -19,6 +19,8 @@
 
 <!-- Add fix Bar  -->
 <?php echo do_shortcode("[devfixBar]");?>
+<!-- Add mobile menu  -->
+<?php echo do_shortcode("[devmenuMobile]");?>
 <div id="wrapper">
 
 	<?php do_action( 'flatsome_before_header' ); ?>
@@ -26,6 +28,7 @@
 	<header id="header" class="header <?php flatsome_header_classes(); ?>">
 		<div class="header-wrapper">
 			<?php get_template_part( 'template-parts/header/header', 'wrapper' ); ?>
+			<!-- <p>Toan</p> -->
 		</div>
 	</header>
 

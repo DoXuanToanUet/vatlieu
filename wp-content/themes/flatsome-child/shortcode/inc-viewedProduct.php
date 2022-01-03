@@ -56,8 +56,11 @@
                                             }
                                         }
                                         // We keep the highest value
-                                        $percentage = max($percentages) . '%';
-                                        echo "<p class='home_sale_custom'>".'-'.$percentage."</p>";
+                                        if( ($percentages) ) {
+                                            $percentage = max($percentages) . '%';
+                                            // echo $percentage;
+                                            echo "<span class='home_sale_custom'>".'-'.$percentage."</span>";
+                                        }  
                                     }
                             ?>
                                             <div class="cat-img">
@@ -73,7 +76,7 @@
                                                     <a href="<?php home_url()?>/checkout/?add-to-cart=<?php echo get_the_id(); ?>" title="Mua ngay" class="dev-buyNow"><span class="lnr lnr-plus-circle"></span></a>
                                                 </div>
                                                 <div class="item">
-                                                    <a href="<?php home_url()?>/product/<?php echo $getCat->post->post_name; ?>" title="Mua ngay" class=""><span class="lnr lnr-plus-circle"></span></a>
+                                                    <a href="<?php home_url()?>/product/<?php echo $getCat->post->post_name; ?>" title="Mua ngay" class=""><span class="lnr lnr-eye"></span></a>
                                                 </div>
                                             </div>
                                             <div class="card-title">
@@ -118,6 +121,18 @@
                     prevEl: '.swiper-button-prev',
                     },
                     loop:false,
+                    breakpoints: {
+                        //max-width> 575px
+                        575: {
+                            slidesPerView: 1.5,
+                            spaceBetween: 15,
+                            // centeredSlides: true,
+                        },
+                        768: {
+                            slidesPerView: 2.5,
+                            spaceBetween: 15,
+                        }
+                    }
             });
         });
     </script>	

@@ -1,0 +1,86 @@
+@media (max-width:991px){
+    .home-vertical-menu{
+        display: none;
+    }
+    .home-devBanner {
+        .gallery-top .swiper-slide{
+            height: 300px;
+        }
+        .gallery-thumbs .banner-text{
+            display: none;
+        }
+    }
+    footer{
+        padding-bottom: 60px;
+    }
+    .page-checkout .left-cart-page{
+        margin-bottom: 15px;
+    }
+    .shop_table .product-remove a{
+        top: 50% !important;
+        transform: translateY(-50%);
+    }
+    .woocommerce-account .vertical-tabs .col-border{
+        max-width: 400px;
+        margin: auto;
+    }
+    .my-account .touch-scroll-table{
+        box-shadow: none;
+    }
+}
+@media (max-width:575px){
+    #tt-quickView{
+        display: none;
+    }
+    .footer-mb{
+        display: block;
+    }
+    .home-devBanner {
+        .gallery-top .swiper-slide{
+            height: 150px;
+        }
+    }
+    .blog{
+        .box-text{
+            padding: 15px;
+        }
+    }
+    .preinfo-section{
+        padding: 15px;
+    }
+    .header-post-custom{
+        flex-wrap: wrap;
+    }
+    .header-post-customLeft{
+        font-size: 15px;
+        margin-bottom: 15px;
+    }
+    .woocommerce-checkout #main, .woocommerce-cart #main{
+        background-color: #fff;
+    }
+    .page-checkout .cart-sidebar,.woocommerce-checkout .has-border-custom,
+    .woocommerce-order-received .thankyou-container{
+        padding: 0px !important;
+    }
+    .checkout-header-item.hide-for-small,.checkout-header-item:not(.current){
+        display: none;
+    }
+    .product-total{
+        min-width: 100px;
+    }
+    .checkout-page-title .checkout-header-item:not(.checkout-header-item.hide-for-small){
+        display: block;
+    }
+    .review-wrapper.comment-product-style{
+        flex-wrap: wrap;
+    }
+    .page-template-tbl-login:not(.logged-in) .content-tab-common form{
+        min-width: unset;
+    }
+    .woocommerce-account .vertical-tabs .col-border{
+       margin: 15px;
+    }
+    .woocommerce-account .dashboard-links li{
+        width: 50%;
+    }
+}

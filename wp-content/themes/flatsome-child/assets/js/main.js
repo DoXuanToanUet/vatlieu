@@ -2,7 +2,7 @@
     $(document).ready(function () {
         
         //Phần tab đăng nhập đăng kí
-        function activeTab(obj) {
+        function activeTabLogin(obj) {
             $(".login-tab .common-tab").removeClass("active-tab");
             let id = $(obj).data("tab");
             $(obj).addClass("active-tab");
@@ -13,10 +13,10 @@
         $('.login-tab .common-tab').click(function (e) {
             // console.log(e.target)
             e.preventDefault();
-            activeTab(this);
+            activeTabLogin(this);
 
         })
-        activeTab('.login-tab .common-tab:first-child');
+        activeTabLogin('.login-tab .common-tab:first-child');
 
         // $('#mega_menu').css("position","relative").addClass('active');
         // $('#mega-menu-title').off();
@@ -72,7 +72,7 @@
                     // centeredSlides: true,
                 },
                 768: {
-                    slidesPerView: 2,
+                    slidesPerView: 2.5,
                     spaceBetween: 15,
                 }
             }
@@ -92,6 +92,8 @@
                         nextEl: '.swiper-button-next',
                         prevEl: '.swiper-button-prev',
                     },
+                    observeParents: true,
+                    observer: true,
                     // pagination: {
                     //     el: '.swiper-pagination',
                     //     clickable: true,
@@ -99,10 +101,10 @@
                     breakpoints: {
                         //max-width> 575px
                         575: {
-                            slidesPerView: 2
+                            slidesPerView: 1.5
                         },
                         768: {
-                            slidesPerView: 2
+                            slidesPerView: 2.5
                         }
                     }
                 });
@@ -126,10 +128,10 @@
                     breakpoints: {
                         //max-width> 575px
                         575: {
-                            slidesPerView: 1
+                            slidesPerView: 1.5
                         },
                         768: {
-                            slidesPerView: 1
+                            slidesPerView: 2.5
                         }
                     }
                 });
@@ -139,6 +141,7 @@
         // console.log( swiperApp)
         swiperApp.swiperGallery('.devProduct-swiper1');
         swiperApp.swiperGallery('.devProduct-swiper2');
+        swiperApp.swiperGallery('.devProduct-swiperfeature');
         swiperApp.swiperGalleryCat('.devProduct-swiperCat');
         // Section sản phẩm
         // var swiperProduct = 
@@ -220,13 +223,32 @@
             }
         })
         
+        //Tab feature product
+        function activeTab(obj) {
+            $(".feature-tab .common-tab").removeClass("active-tab");
+            let id = $(obj).data("tab");
+            $(obj).addClass("active-tab");
+            $(".featureTab").hide();
+            // console.log(id);
+            $("." + id).show();
+          }
+        $(".feature-tab .common-tab").click(function (e) {
+            // console.log(e.target);
+            e.preventDefault();
+            activeTab(this);
+        });
+        activeTab(".feature-tab .common-tab:first-child");
 
-        // Custom homepage slider
-        t= $(".home-vertical-menu #menu-ot li");
-        $(t).each(function (){
-            t1=$(this).find("button i.icon-angle-down")
-            console.log(t1)
+
+        // Custom category mobile menu
+        $('.category-mb-link').click(function (e){
+            e.preventDefault();
+            $('body').toggleClass("no-scroll");
+            $('.category-mb').toggleClass('active');
         })
-      
+
+        // // Wow js 
+        new WOW().init();
+
     })
 })(jQuery);

@@ -11,6 +11,9 @@ function add_theme_scripts()
 
     wp_enqueue_script('devSwiperJs', get_stylesheet_directory_uri() . '/assets/plugins/swiper/swiper.min.js', array(), $version, true);
     wp_enqueue_script('devMainJS', get_stylesheet_directory_uri() . '/assets/js/main.js', array(), $version, true);
+
+    wp_enqueue_style('WowCss', get_stylesheet_directory_uri() . '/assets/plugins/wowjs/animate.min.css', array(), $version, 'all');
+    wp_enqueue_script('WowJs', get_stylesheet_directory_uri() . '/assets/plugins/wowjs/wow.min.js', array(), $version, true);
 }
 
 add_action('wp_enqueue_scripts', 'add_theme_scripts');
@@ -18,18 +21,18 @@ add_action('wp_enqueue_scripts', 'add_theme_scripts');
 
 
 //Include Inc Ajax and shortcode
-require get_stylesheet_directory() . '/shortcode/inc-customHeaderPost.php';
-require get_stylesheet_directory() . '/shortcode/inc-devProduct.php';
-require get_stylesheet_directory() . '/shortcode/inc-register.php';
-require get_stylesheet_directory() . '/shortcode/inc-saleNews.php';
-require get_stylesheet_directory() . '/shortcode/inc-viewedProduct.php';
-require get_stylesheet_directory() . '/shortcode/inc-customProductSidebar.php';
-require get_stylesheet_directory() . '/shortcode/inc-comment.php';
-require get_stylesheet_directory() . '/shortcode/inc-comment-func.php';
-require get_stylesheet_directory() . '/shortcode/inc-fixbar.php';
-require get_stylesheet_directory() . '/shortcode/inc-catSlider.php';
-require get_stylesheet_directory() . '/custom/custom-avartar.php';
-require get_stylesheet_directory() . '/custom/custom-checkout.php';
+// require get_stylesheet_directory() . '/shortcode/inc-customHeaderPost.php';
+// require get_stylesheet_directory() . '/shortcode/inc-devProduct.php';
+// require get_stylesheet_directory() . '/shortcode/inc-register.php';
+// require get_stylesheet_directory() . '/shortcode/inc-saleNews.php';
+// require get_stylesheet_directory() . '/shortcode/inc-viewedProduct.php';
+// require get_stylesheet_directory() . '/shortcode/inc-customProductSidebar.php';
+// require get_stylesheet_directory() . '/shortcode/inc-comment.php';
+// require get_stylesheet_directory() . '/shortcode/inc-comment-func.php';
+// require get_stylesheet_directory() . '/shortcode/inc-fixbar.php';
+// require get_stylesheet_directory() . '/shortcode/inc-catSlider.php';
+// require get_stylesheet_directory() . '/custom/custom-avartar.php';
+// require get_stylesheet_directory() . '/custom/custom-checkout.php';
 
 
 
@@ -167,3 +170,14 @@ function change_price_text_in_cart_page( $translated, $text, $domain ) {
 }
 
 
+// Autoload file 
+function auto_load_files($path) {
+
+    $files = glob($path);
+
+    foreach ($files as $file) {
+        require($file); 
+    }
+}
+auto_load_files(get_stylesheet_directory() . '/shortcode/*.php');
+auto_load_files(get_stylesheet_directory() . '/custom/*.php');
