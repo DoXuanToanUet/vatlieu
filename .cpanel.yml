@@ -1,6 +1,6 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/doxuanto/vatlieu.doxuantoan.com
+    - export DEPLOYPATH=/home/khoianhh/public_html/vatlieunha.vn
     - /bin/cp -R  * $DEPLOYPATH
   
