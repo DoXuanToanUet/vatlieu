@@ -1,6 +1,7 @@
 <?php function createfixBar($attr)
 {
-?>
+?>  
+<?php if (get_field('fix_bar_status','option') == true): ?>
     <div id="tt-quickView" style="">
         <div class="tt-quickview-wrap">
             <div class="vmore-item">
@@ -79,6 +80,7 @@
         </div>
 
     </div>
+<?php endif;?>
 <?php 
 }
 

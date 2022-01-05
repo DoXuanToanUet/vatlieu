@@ -6,7 +6,7 @@ wp-config.php
 **/*.zip
 **/*.rar
 **/cache
-
+/wp-content/backups-dup-pro
 
 /node_modules
 /package-lock.json

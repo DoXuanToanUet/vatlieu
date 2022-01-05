@@ -1,0 +1,38 @@
+// Css for background theme fot Tet or holiday
+.bkg-theme{
+    .item{
+        position: fixed;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100px;
+        min-height: 300px;
+        z-index: 99;
+    }
+    .bkg-left{
+        left: 10px;
+    }
+    .bkg-right{
+        right: 10px;
+    }
+}
+@media (max-width:991px) {
+    .bkg-theme{
+        display: none;
+    }
+}
+// body{
+//     position: relative;
+//     &:after{
+//         content:"";
+//         position: absolute;
+//         top: 0;
+//         left: 0;
+//         width: 100%;
+//         height: 100%;
+//         background-color: red;
+//         z-index: 0;
+//     }
+//     section .container{
+//         background-color: #fff;
+//     }
+// }

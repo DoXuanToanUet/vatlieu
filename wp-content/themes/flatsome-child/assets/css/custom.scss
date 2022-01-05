@@ -463,7 +463,7 @@ a.dev-tabCustom{
         padding: 10px !important;
     }
 }
-.dev-short-description.show{
+.dev-short-description.show,.table-tskt.show,.tab-panels .woocommerce-Tabs-panel .content.show, .content-tabtskt.show{
     // max-height:150px; overflow:hidden;
     position: relative;
     &:after{
@@ -490,10 +490,10 @@ a.dev-tabCustom{
     max-height: 150px;
     overflow: hidden;
 }
-.tab-panels .woocommerce-Tabs-panel .content.show{
-    max-height:150px; overflow:hidden;
+.tab-panels .woocommerce-Tabs-panel .content.show,.content-tabtskt.show{
+    max-height:300px; overflow:hidden;
 }
-.dev-short-description.expand,.tab-panels .woocommerce-Tabs-panel .content.expand{
+.dev-short-description.expand,.tab-panels .woocommerce-Tabs-panel .content.expand,.content-tabtskt.expand{
     max-height: unset;
     &:after{
         display: none;
@@ -508,3 +508,4 @@ a.dev-tabCustom{
 }
 
 @import "common/responsive";
+@import "common/bkg_theme";

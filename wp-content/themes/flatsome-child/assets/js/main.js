@@ -174,14 +174,32 @@
             })
         }
 
+        // Thông số kĩ thuật thu gọn 
+        heightShortDesctskt = $('.table-tskt ').height();
+        console.log(heightShortDesctskt);
+        // if( )
+        if( heightShortDesctskt > 300){
+            $(".content-tabtskt").toggleClass('show');
+            $(" .table-tskt  .short-desc-toggle").toggleClass('show');
+            $(".table-tskt .short-desc-toggle").click( function(){
+                $(this).parent().find('.content-tabtskt ').toggleClass('expand');
+                if(  $('.table-tskt .expand-text').text() == 'Xem thêm'){
+                    $('.table-tskt .expand-text').text("Thu gọn");
+                } else{
+                    $('.table-tskt .expand-text').text("Xem thêm");
+                }
+                
+            })
+        }
+
         heightShortDescDiv = $('.woocommerce-Tabs-panel .content');
         // console.log(heightShortDescDiv)
         $(heightShortDescDiv).each( function (){
             heightShortDesc1 = $(this).height();
             // console.log("toan");
-            console.log(heightShortDesc1);
+            // console.log(heightShortDesc1);
 
-            if( heightShortDesc1 > 150){
+            if( heightShortDesc1 > 300){
                 $(this).toggleClass('show');
                 $(this).parent().find(".short-desc-toggle").toggleClass('show');
                 $(this).parent().find(".short-desc-toggle").click( function(){

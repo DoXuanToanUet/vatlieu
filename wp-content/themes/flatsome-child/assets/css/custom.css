@@ -2011,11 +2011,11 @@ a.dev-tabCustom:hover {
   padding: 10px !important;
 }
 
-.dev-short-description.show {
+.dev-short-description.show, .table-tskt.show, .tab-panels .woocommerce-Tabs-panel .content.show, .content-tabtskt.show {
   position: relative;
 }
 
-.dev-short-description.show:after {
+.dev-short-description.show:after, .table-tskt.show:after, .tab-panels .woocommerce-Tabs-panel .content.show:after, .content-tabtskt.show:after {
   content: "";
   height: 50px;
   width: 100%;
@@ -2051,16 +2051,16 @@ a.dev-tabCustom:hover {
   overflow: hidden;
 }
 
-.tab-panels .woocommerce-Tabs-panel .content.show {
-  max-height: 150px;
+.tab-panels .woocommerce-Tabs-panel .content.show, .content-tabtskt.show {
+  max-height: 300px;
   overflow: hidden;
 }
 
-.dev-short-description.expand, .tab-panels .woocommerce-Tabs-panel .content.expand {
+.dev-short-description.expand, .tab-panels .woocommerce-Tabs-panel .content.expand, .content-tabtskt.expand {
   max-height: unset;
 }
 
-.dev-short-description.expand:after, .tab-panels .woocommerce-Tabs-panel .content.expand:after {
+.dev-short-description.expand:after, .tab-panels .woocommerce-Tabs-panel .content.expand:after, .content-tabtskt.expand:after {
   display: none;
 }
 
@@ -2158,6 +2158,30 @@ a.dev-tabCustom:hover {
   }
   .icon-menu {
     color: #fff;
+  }
+}
+
+.bkg-theme .item {
+  position: fixed;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 100px;
+  min-height: 300px;
+  z-index: 99;
+}
+
+.bkg-theme .bkg-left {
+  left: 10px;
+}
+
+.bkg-theme .bkg-right {
+  right: 10px;
+}
+
+@media (max-width: 991px) {
+  .bkg-theme {
+    display: none;
   }
 }
 /*# sourceMappingURL=custom.css.map */

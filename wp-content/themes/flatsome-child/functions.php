@@ -87,20 +87,23 @@ add_action('wp', 'viewedProduct');
 /**
  * Tạo tab Tiêu chuẩn của sản phẩm
  */
-// add_filter( 'woocommerce_product_tabs', 'woo_new_standard_tab' );
-// function woo_new_standard_tab( $tabs ) {
+add_filter( 'woocommerce_product_tabs', 'woo_new_standard_tab' );
+function woo_new_standard_tab( $tabs ) {
 	
-// 	// Adds the new tab
+	// Adds the new tab
 	
-// 	$tabs['standard_tab'] = array(
-// 		'title' 	=> __( 'Tiêu chuẩn', 'woocommerce' ),
-// 		'priority' 	=> 20,
-// 		'callback' 	=> 'woo_new_standard_tab_content'
-// 	);
+	$tabs['hdsd_tab'] = array(
+		'title' 	=> __( 'Hướng dẫn sử dụng', 'woocommerce' ),
+		'priority' 	=> 20,
+		'callback' 	=> 'woo_new_standard_tab_content'
+	);
 
-// 	return $tabs;
+	return $tabs;
 
-// }
+}
+function woo_new_standard_tab_content(){
+    the_field('hdsd_woo_tab');
+}
 // Hiển thị giảm giá theo phần trăm cho sản phẩm 
 // =============================================
 

@@ -140,9 +140,11 @@
             <?php if (have_rows('home_product_rp','option')): while (have_rows('home_product_rp','option')) : the_row(); ?>
                 <div class="feature-slide">
                     <?php  $termHome = get_sub_field('name','option');
-                    // var_dump($termHome);
+                    
+                    // var_dump($termHome->name);
                     if( $termHome ): ?>
-                        <?php echo do_shortcode( "[devProductHome title=$termHome->name cat=$termHome->term_id swiperid=1]" )?>
+                        <?php $term_name =$termHome->name; ?>
+                        <?php echo do_shortcode( "[devProductHome cat=$termHome->term_id title='$term_name' swiperid=1]" )?>
                     <?php endif; ?>           
                 </div>
             <?php endwhile;else :endif;?>
@@ -157,6 +159,22 @@
     </div>
 </section>
 
+<?php if (get_field('bkg_theme_status','option') == true): ?>
+    <div class="bkg-theme">
+        <?php if (have_rows('bkg_theme_rp','option')): while (have_rows('bkg_theme_rp','option')) : the_row(); ?>
+            <?php if (get_sub_field('status','option') == true ) :?>
+                <div class="item bkg-left">
+                    <?php// $status= get_sub_field('status','option'); echo $status; ?>  
+                    <img src="<?php echo get_sub_field('bkg_left','option');?>" alt="">
+                </div>
+                <div class="item bkg-right">
+                    <?php// $status= get_sub_field('status','option'); echo $status; ?>  
+                    <img src="<?php echo get_sub_field('bkg_right','option');?>" alt="">
+                </div>
+            <?php endif;?>
+        <?php endwhile;else :endif;?>
+    </div>
+<?php endif;?>
 <!-- <div class="header-phone flex justify-content-center align-items-center">
     <div class="header-item">
         <a href="tel:012345678" class="flex">

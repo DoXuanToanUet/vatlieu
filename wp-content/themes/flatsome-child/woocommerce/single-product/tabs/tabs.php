@@ -93,8 +93,15 @@ if ( ! empty( $product_tabs ) ) : ?>
                 <h3 class="dev-tabTitle">Thông số kĩ thuật</h3>
                 <?php if(get_field('tskt_woo_tab') ): ?>
                     <div class="content table-tskt">
-                        <?php the_field('tskt_woo_tab'); ?>
+                        <div class="content-tabtskt">
+                            <?php the_field('tskt_woo_tab'); ?>
+                        </div>
+                        <div class="short-desc-toggle">
+                            <span class="expand-text" style="padding-right:10px">Xem thêm</span>
+                            <span class="lnr lnr-chevron-down"></span>
+                        </div>
                     </div>
+                    
                 <?php endif;?>
             </div>
         </div>
