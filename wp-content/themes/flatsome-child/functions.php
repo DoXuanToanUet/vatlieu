@@ -1,5 +1,4 @@
 <?php 
-
 //Add Style and Script
 function add_theme_scripts()
 {

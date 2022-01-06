@@ -6,7 +6,7 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
 	<link rel="profile" href="http://gmpg.org/xfn/11" />
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
-
+	<meta property="og:image" content="http://vatlieunha.vn/wp-content/uploads/2022/01/cropped-z3079433077036_07251c2a800d52a17301309557698f2c.jpg">
 	<?php wp_head(); ?>
 </head>
 

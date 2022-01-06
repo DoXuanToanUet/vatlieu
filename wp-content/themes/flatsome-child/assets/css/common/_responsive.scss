@@ -86,5 +86,17 @@
     .icon-menu{
         color: #fff;
     }
-    
+    .feature-tab{
+        margin-bottom: 15px;
+        overflow-x: scroll !important;
+        overflow-y: hidden !important;
+        flex-wrap: nowrap;
+        max-width: 100%;
+    }
+    .feature-home-section .feature-tab{
+        justify-content: flex-start;
+    }
+    .feature-home-section .feature-tab .common-tab{
+        white-space: nowrap;
+    }
 }
