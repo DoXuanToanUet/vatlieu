@@ -83,9 +83,9 @@
                                                 <div class="home-term-product">
                                                     <?php 
                                                         $terms = get_the_terms( get_the_ID(), 'product_cat' );
-                                                        foreach( $terms as $term):
-                                                            ?><a href="<?php home_url();?>/product-category/<?php echo $term->slug;?>" class="dev-tabCustom"><?php echo $term->name;?></a><?php 
-                                                        endforeach;
+                                                        // foreach( $terms as $term):
+                                                            ?><a href="<?php home_url();?>/product-category/<?php echo $terms[0]->slug;?>" class="dev-tabCustom"><?php echo $terms[0]->name;?></a><?php 
+                                                        // endforeach;
                                                         // echo "<pre>";
                                                         // var_dump();
                                                         // echo "</pre>";

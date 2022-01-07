@@ -5,7 +5,7 @@
     <div class="footer-mb">
         <div class="content">
             <div class="item">
-                <a href="">
+                <a href="<?php echo home_url(); ?>">
                     <span class="lnr lnr-home"></span>
                     <p>Trang chủ</p>
                 </a>
@@ -58,8 +58,8 @@
                         
                         <?php  $term = get_sub_field('name','option');
                         // var_dump($term);
-                        $link = get_term_link( $term->term_id, 'product_cat');
-                        if( $term ): ?>
+                       
+                        if( $term ):  $link = get_term_link( $term->term_id, 'product_cat');?>
                         <div class="col small-4">
                            
                                 <a href="<?php echo $link;?>" class=" wow fadeInDown" data-wow-duration="1s" data-wow-delay="<?php echo $i;?>s">

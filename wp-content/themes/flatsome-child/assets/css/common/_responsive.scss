@@ -99,4 +99,23 @@
     .feature-home-section .feature-tab .common-tab{
         white-space: nowrap;
     }
+    .product-thumbnails img{
+        height: unset;
+        object-fit: unset;
+    }
+    .saleNews-swiper .swiper-slide .card, .devProduct-list .swiper-slide .card{
+        padding: 0px;
+    }
+    .saleNews-swiper .card-title, .devProduct-list .card-title{
+        padding: 10px;
+    }
+    .saleNews-swiper .card-title .title, .devProduct-list .card-title .title{
+        font-size: 13px;
+    }
+    a.dev-tabCustom{
+        padding: 2px 4px;
+    }
+    .saleNews-swiper .card-title .price, .devProduct-list .card-title .price{
+        font-size: 13px;
+    }
 }

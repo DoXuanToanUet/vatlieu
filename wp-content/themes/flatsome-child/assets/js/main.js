@@ -67,7 +67,7 @@
             breakpoints: {
                 //max-width> 575px
                 575: {
-                    slidesPerView: 1.5,
+                    slidesPerView: 2,
                     spaceBetween: 15,
                     // centeredSlides: true,
                 },
@@ -101,7 +101,7 @@
                     breakpoints: {
                         //max-width> 575px
                         575: {
-                            slidesPerView: 1.5
+                            slidesPerView: 2
                         },
                         768: {
                             slidesPerView: 2.5
@@ -128,7 +128,7 @@
                     breakpoints: {
                         //max-width> 575px
                         575: {
-                            slidesPerView: 1.5
+                            slidesPerView: 2
                         },
                         768: {
                             slidesPerView: 2.5
@@ -176,7 +176,7 @@
 
         // Thông số kĩ thuật thu gọn 
         heightShortDesctskt = $('.table-tskt ').height();
-        console.log(heightShortDesctskt);
+        // console.log(heightShortDesctskt);
         // if( )
         if( heightShortDesctskt > 300){
             $(".content-tabtskt").toggleClass('show');
@@ -222,7 +222,7 @@
             // console.log()
             // console.log(typeof toan)
             trim = gethtml.replace(/\s/g, '')
-            console.log(trim);
+            // console.log(trim);
             switch (trim) {
                 case 'Đangxửlý':
                     $(this).html(`<div class="flex-status"><p class="front-status-processing front-status"><i class="fa fa-circle" style="padding-right:4px"></i>Đang xử lý </p></div>`)

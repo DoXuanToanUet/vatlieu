@@ -506,6 +506,12 @@ a.dev-tabCustom{
     -webkit-box-orient: vertical;
     text-overflow: ellipsis;
 }
+.product-thumbnails a:hover, .product-thumbnails .is-nav-selected a{
+    border-color: $main_color !important;
+}
+.product-thumbnails a{
+    aspect-ratio: 1;
+}
 
 @import "common/responsive";
 @import "common/bkg_theme";
